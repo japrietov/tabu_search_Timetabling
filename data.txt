@@ -1,0 +1,39 @@
+Aztaiza,1,diferencial,N
+Aztaiza,1,introduccion sistemas,N
+Aztaiza,1,programacion,C
+Aztaiza,2,fundamentos de mecanica,N
+Aztaiza,2,integral,N
+Aztaiza,2,lineal,N
+Aztaiza,2,POO,C
+Aztaiza,3,probabilidad,N
+Aztaiza,3,varias variables,N
+Aztaiza,3,discretas1,N
+Aztaiza,3,bases de datos,C
+Aztaiza,3,elementos de computadores,C
+Aztaiza,4,fundamentos de electricidad,N
+Aztaiza,4,ingenieria economica,C
+Aztaiza,4,discretas1,N
+Aztaiza,4,estructura datos,C
+Aztaiza,4,arquitectura de computadores,C
+Aztaiza,5,simulacion,C
+Aztaiza,5,gerencia,N
+Aztaiza,5,redes de computadores,C
+Aztaiza,5,ingesoft1,C
+Aztaiza,5,intro teoria de computacion,N
+Aztaiza,6,optimizacion,C
+Aztaiza,6,metodos numericos,C
+Aztaiza,6,sistemas de informacion,N
+Aztaiza,6,ingesoft2,C
+Aztaiza,6,algoritmos,C
+Aztaiza,6,sistemas operativos,C
+Aztaiza,7,estocasticos,N
+Aztaiza,7,informacion y comunicaciones,C
+Aztaiza,7,pensamiento sistemico,N
+Aztaiza,7,arquitectura de software,C
+Aztaiza,7,lenguajes de programacion,C
+Aztaiza,7,introduccion sistemas inteligentes,N
+Aztaiza,8,paralela,C
+Aztaiza,8,visual,C
+Aztaiza,8,interdiciplinarios,N
+Aztaiza,8,TICS,C
+Aztaiza,8,Criptografia,N
