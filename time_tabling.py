@@ -22,7 +22,9 @@ def make_random_capability():
 def possible_combinations():
     time_slots_list = time_slots.keys()
     for key in type_classrooms:
-        dict_possible_combinations[key] = list(itertools.product(days, time_slots_list, type_classrooms[key]))
+        tmp_product = list(itertools.product(days, time_slots_list, type_classrooms[key]))
+        random.shuffle(tmp_product)
+        dict_possible_combinations[key] = tmp_product
     return dict_possible_combinations
 
 
@@ -36,24 +38,102 @@ def first_configuration(data_complete):
         data_split = dat.split(",")
         if data_split[3] == 'C':
             # Choose only the classroom that have more seats that the capability of the course
-            configC = None
+            configC = []
+
+            copy_copy_copy = dict_possible_combinations_copy['C'][:]
             for comb in dict_possible_combinations_copy['C']:
                 if int(data_split[4]) < dict_of_classrooms[comb[2]][1]:
-                    #configC = random.randint(0,len(dict_possible_combinations_copy['C'])-1))
-                    dict_possible_combinations_copy['C'].pop(dict_possible_combinations_copy['C'].index(comb))
-                    configC = comb
+
+                    # Make the block (Mo - We, Th - Th, We - Fr)
+                    tmp__ = None
+                    if comb[0] == 0:
+                        if (2, comb[1], comb[2]) in copy_copy_copy:
+                            tmp__ = (2, comb[1], comb[2])
+                        else:
+                            for cl in type_classrooms['C']:
+                                if (2, comb[1], cl) in copy_copy_copy:
+                                    tmp__ = (2, comb[1], cl)
+                                    break
+                    elif comb[0] == 2:
+                        if (0, comb[1], comb[2]) in copy_copy_copy:
+                            tmp__ = (0, comb[1], comb[2])
+                        else:
+                            for cl in type_classrooms['C']:
+                                if (0, comb[1], cl) in copy_copy_copy:
+                                    tmp__ = (0, comb[1], cl)
+                                    break
+                    elif comb[0] == 1:
+                        tmp__ = (3, comb[1], comb[2])
+                    elif comb[0] == 3:
+                        tmp__ = (1, comb[1], comb[2])
+                    else:
+                        if (2, comb[1], comb[2]) in copy_copy_copy:
+                            tmp__ = (2, comb[1], comb[2])
+                        else:
+                            for cl in type_classrooms['C']:
+                                if (2, comb[1], cl) in copy_copy_copy:
+                                    tmp__ = (2, comb[1], cl)
+                                    break
+
+                    copy_copy_copy.pop(copy_copy_copy.index(tmp__))
+                    copy_copy_copy.pop(copy_copy_copy.index(comb))
+
+                    configC.append(comb)
+                    configC.append(tmp__)
+
+                    # print "C", configC
                     break
-            #indexC +=1
+            dict_possible_combinations_copy['C'] = copy_copy_copy[:]
             dict_current_configuration[dat] = configC
-        if data_split[3] == 'N':
+        else:
             #indexN += 1
-            configN = None
-            for comb in dict_possible_combinations_copy['N']:
-                if int(data_split[4]) < dict_of_classrooms[comb[2]][1]:
-                    #configC = dict_possible_combinations_copy['C'].pop(random.randint(0,len(dict_possible_combinations_copy['C'])-1))
-                    dict_possible_combinations_copy['N'].pop(dict_possible_combinations_copy['N'].index(comb))
-                    configN = comb
+            configN = []
+
+            copy_copy = dict_possible_combinations_copy['N'][:]
+            for combN in dict_possible_combinations_copy['N']:
+                if int(data_split[4]) < dict_of_classrooms[combN[2]][1]:
+
+                    # Make the block (Mo - We, Th - Th, We - Fr)
+                    tmp_ = None
+                    if combN[0] == 0:
+                        if (2, combN[1], combN[2]) in copy_copy:
+                            tmp_ = (2, combN[1], combN[2])
+                        else:
+                            for cl in type_classrooms['N']:
+                                if (2, combN[1], cl) in copy_copy:
+                                    tmp_ = (2, combN[1], cl)
+                                    break
+                    elif combN[0] == 2:
+                        if (0, combN[1], combN[2]) in copy_copy:
+                            tmp_ = (0, combN[1], combN[2])
+                        else:
+                            for cl in type_classrooms['N']:
+                                if (0, combN[1], cl) in copy_copy:
+                                    tmp_ = (0, combN[1], cl)
+                                    break
+                    elif combN[0] == 1:
+                        tmp_ = (3, combN[1], combN[2])
+                    elif combN[0] == 3:
+                        tmp_ = (1, combN[1], combN[2])
+                    else:
+                        if (2, combN[1], combN[2]) in copy_copy:
+                            tmp_ = (2, combN[1], combN[2])
+                        else:
+                            for cl in type_classrooms['N']:
+                                if (2, combN[1], cl) in copy_copy:
+                                    tmp_ = (2, combN[1], cl)
+                                    break
+
+                    copy_copy.pop(copy_copy.index(tmp_))
+                    copy_copy.pop(copy_copy.index(combN))
+
+                    configN.append(combN)
+                    configN.append(tmp_)
+
+
+                    # print "N", configN
                     break
+            dict_possible_combinations_copy['N'] = copy_copy[:]
             dict_current_configuration[dat] = configN
 
     # print indexC, len(dict_possible_combinations_copy['C'])
@@ -78,7 +158,7 @@ possible_combinations()
 
 # 3D matrix (x=weekdays, y=slots, z=classrooms)
 matrix_complete = np.chararray((5, len(time_slots.keys()), 10), itemsize=50)
-matrix_complete[:] = '-----'
+matrix_complete[:] = '------------'
 
 # A tuple in each position of the matrix (name_professor, semester, course, type_of_classroom, capability)
 data = open("data.txt").readlines()
@@ -91,23 +171,37 @@ for dat in data:
 # Test the first configuration
 ################################################
 
-print dict_possible_combinations
+# print dict_possible_combinations
 
 tmp, copy = first_configuration(data_with_capability)
 
 # Assign the values of the first configuration to the matrix.
+
+
 for j in tmp:
-    day = tmp[j][0]
-    slot = tmp[j][1]
-    classroom = tmp[j][2]
-    matrix_complete[day][slot][classroom] = j.split(',')[2]
+    day1 = tmp[j][0][0]
+    slot1 = tmp[j][0][1]
+    classroom1 = tmp[j][0][2]
+    day2 = tmp[j][1][0]
+    slot2 = tmp[j][1][1]
+    classroom2 = tmp[j][1][2]
+
+    matrix_complete[day1][slot1][classroom1] = j.split(',')[2]
+    matrix_complete[day2][slot2][classroom2] = j.split(',')[2]
+
+
     # print j, "|", days[tmp[j][0]], time_slots[tmp[j][1]], dict_of_classrooms[tmp[j][2]], "|", tmp[j]
 
 
 # Print the matrix complete using only The day "MONDAY"
 import pandas as pd
-df = pd.DataFrame(matrix_complete[0], index=time_slots.values(), columns=[i[0] for i in dict_of_classrooms.values()])
-print df
+
+
+for i in range(len(matrix_complete)):
+    print days[i].upper()
+    df = pd.DataFrame(matrix_complete[i], index=time_slots.values(), columns=[i[0] for i in dict_of_classrooms.values()])
+    print df.to_string()
+    print
 
 
 
