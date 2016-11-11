@@ -1,9 +1,12 @@
-import itertools
-list1=[1,2,3,4,5,6]
-l = list1[:]
+import numpy as np
 
-l.pop()
-print l
-print list1
+# Load the first configuration
+dict_first_conf = np.load('first_conf_dict.npy').item()
+matrix_first_conf = np.load('first_conf_matrix.npy')
+
+
+
+print dict_first_conf
+print matrix_first_conf
 
 

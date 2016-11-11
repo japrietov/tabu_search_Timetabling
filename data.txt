@@ -1,39 +1,78 @@
-Aztaiza,1,diferencial,N
-Aztaiza,1,introduccion sistemas,N
-Aztaiza,1,programacion,C
-Aztaiza,2,fundamentos de mecanica,N
-Aztaiza,2,integral,N
-Aztaiza,2,lineal,N
-Aztaiza,2,POO,C
-Aztaiza,3,probabilidad,N
-Aztaiza,3,varias variables,N
-Aztaiza,3,discretas1,N
-Aztaiza,3,bases de datos,C
-Aztaiza,3,elementos de computadores,C
-Aztaiza,4,fundamentos de electricidad,N
-Aztaiza,4,ingenieria economica,C
-Aztaiza,4,discretas1,N
-Aztaiza,4,estructura datos,C
-Aztaiza,4,arquitectura de computadores,C
-Aztaiza,5,simulacion,C
-Aztaiza,5,gerencia,N
-Aztaiza,5,redes de computadores,C
-Aztaiza,5,ingesoft1,C
-Aztaiza,5,intro teoria de computacion,N
-Aztaiza,6,optimizacion,C
-Aztaiza,6,metodos numericos,C
-Aztaiza,6,sistemas de informacion,N
-Aztaiza,6,ingesoft2,C
-Aztaiza,6,algoritmos,C
-Aztaiza,6,sistemas operativos,C
-Aztaiza,7,estocasticos,N
-Aztaiza,7,informacion y comunicaciones,C
-Aztaiza,7,pensamiento sistemico,N
-Aztaiza,7,arquitectura de software,C
-Aztaiza,7,lenguajes de programacion,C
-Aztaiza,7,introduccion sistemas inteligentes,N
-Aztaiza,8,paralela,C
-Aztaiza,8,visual,C
-Aztaiza,8,interdiciplinarios,N
-Aztaiza,8,TICS,C
-Aztaiza,8,Criptografia,N
+A,1,diferencial,N
+B,1,introduccion sistemas,N
+C,1,programacion,C
+D,2,fundamentos de mecanica,N
+E,2,integral,N
+F,2,lineal,N
+G,2,POO,C
+H,3,probabilidad,N
+I,3,varias variables,N
+J,3,discretas1,N
+K,3,bases de datos,C
+L,3,elementos de computadores,C
+M,4,fundamentos de electricidad,N
+N,4,ingenieria economica,C
+O,4,discretas1,N
+P,4,estructura datos,C
+Q,4,arquitectura de computadores,C
+R,5,simulacion,C
+S,5,gerencia,N
+T,5,redes de computadores,C
+U,5,ingesoft1,C
+V,5,intro teoria de computacion,N
+W,6,optimizacion,C
+X,6,metodos numericos,C
+Y,6,sistemas de informacion,N
+Z,6,ingesoft2,C
+AA,6,algoritmos,C
+AB,6,sistemas operativos,C
+AC,7,estocasticos,N
+AD,7,informacion y comunicaciones,C
+AE,7,pensamiento sistemico,N
+AF,7,arquitectura de software,C
+AG,7,lenguajes de programacion,C
+AH,7,introduccion sistemas inteligentes,N
+AI,8,paralela,C
+AJ,8,visual,C
+AK,8,interdiciplinarios,N
+AL,8,TICS,C
+AM,8,Criptografia,N
+Ax,1,diferencial,N
+Bx,1,introduccion sistemas,N
+Cx,1,programacion,C
+Dx,2,fundamentos de mecanica,N
+Ex,2,integral,N
+Fx,2,lineal,N
+Gx,2,POO,C
+Hx,3,probabilidad,N
+Ix,3,varias variables,N
+Jx,3,discretas1,N
+Kx,3,bases de datos,C
+Lx,3,elementos de computadores,C
+Mx,4,fundamentos de electricidad,N
+Nx,4,ingenieria economica,C
+Ox,4,discretas1,N
+Px,4,estructura datos,C
+Qx,4,arquitectura de computadores,C
+Rx,5,simulacion,C
+Sx,5,gerencia,N
+Tx,5,redes de computadores,C
+Ux,5,ingesoft1,C
+Vx,5,intro teoria de computacion,N
+Wx,6,optimizacion,C
+Xx,6,metodos numericos,C
+Yx,6,sistemas de informacion,N
+Zx,6,ingesoft2,C
+AxA,6,algoritmos,C
+AxB,6,sistemas operativos,C
+AxC,7,estocasticos,N
+AxD,7,informacion y comunicaciones,C
+AxE,7,pensamiento sistemico,N
+AxF,7,arquitectura de software,C
+AxG,7,lenguajes de programacion,C
+AxH,7,introduccion sistemas inteligentes,N
+AxI,8,paralela,C
+AxJ,8,visual,C
+AxK,8,interdiciplinarios,N
+AxL,8,TICS,C
+AxM,8,Criptografia,N

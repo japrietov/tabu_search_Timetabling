@@ -1,0 +1,45 @@
+MONDAY
+                103           203                303                       101                           102           104                          105                      106                    107           108
+7_9    ------------  ------------               TICS              ------------                  ------------  ------------  intro teoria de computacion                   lineal             discretas1  ------------
+9_11   ------------  ------------       ------------              ------------                  ------------  ------------                     integral             ------------           ------------        lineal
+11_13  ------------      paralela       ------------          estructura datos                  ------------  ------------                 ------------         varias variables               gerencia  ------------
+14_16  ------------  ------------  metodos numericos              ------------                           POO  ------------      fundamentos de mecanica  fundamentos de mecanica           ------------  ------------
+16_18  ------------     ingesoft2       programacion  arquitectura de software                  ------------  ------------                 ------------       interdiciplinarios            diferencial  ------------
+18_20     ingesoft1  optimizacion       ------------              ------------  arquitectura de computadores  ------------                 estocasticos             ------------  pensamiento sistemico  ------------
+
+TUESDAY
+                        103                           203                  303                       101                        102                           104                    105                                 106                                 107                      108
+7_9            ------------                  ------------  sistemas operativos            bases de datos               ------------                  ------------           ------------             sistemas de informacion         fundamentos de electricidad             ------------
+9_11           ------------                  programacion     estructura datos                 ingesoft1               ------------                  ------------           ------------                        probabilidad         intro teoria de computacion  sistemas de informacion
+11_13                   POO                bases de datos         ------------  arquitectura de software  elementos de computadores                  ------------  introduccion sistemas                        ------------  introduccion sistemas inteligentes              diferencial
+14_16            algoritmos     lenguajes de programacion  sistemas operativos                      TICS               ------------                  ------------             discretas1                            gerencia               pensamiento sistemico             probabilidad
+16_18  ingenieria economica                  ------------            ingesoft2              ------------               ------------                  ------------             discretas1                        ------------                        ------------             ------------
+18_20  ingenieria economica  informacion y comunicaciones               visual                  paralela               ------------  arquitectura de computadores           ------------  introduccion sistemas inteligentes                    varias variables             Criptografia
+
+WEDNESDAY
+                             103                    203                    303                        101                           102                           104                          105                      106                    107                          108
+7_9                 ------------  redes de computadores                   TICS               ------------                  ------------                  optimizacion  intro teoria de computacion                   lineal             discretas1  fundamentos de electricidad
+9_11                  simulacion           ------------  redes de computadores  elementos de computadores                  ------------                        visual                     integral             Criptografia           ------------                       lineal
+11_13  lenguajes de programacion               paralela           ------------           estructura datos                    algoritmos                  ------------                 ------------         varias variables               gerencia                 ------------
+14_16               ------------             simulacion      metodos numericos               ------------                           POO                  ------------      fundamentos de mecanica  fundamentos de mecanica  introduccion sistemas                 ------------
+16_18               ------------              ingesoft2           programacion   arquitectura de software                  ------------                  ------------           interdiciplinarios       interdiciplinarios            diferencial                     integral
+18_20                  ingesoft1           optimizacion           ------------          metodos numericos  arquitectura de computadores  informacion y comunicaciones                 estocasticos             estocasticos  pensamiento sistemico                   discretas1
+
+THURSDAY
+                        103                           203                  303                       101                        102                           104                    105                                 106                                 107                      108
+7_9            ------------                  ------------  sistemas operativos            bases de datos               ------------                  ------------           ------------             sistemas de informacion         fundamentos de electricidad             ------------
+9_11           ------------                  programacion     estructura datos                 ingesoft1               ------------                  ------------           ------------                        probabilidad         intro teoria de computacion  sistemas de informacion
+11_13                   POO                bases de datos         ------------  arquitectura de software  elementos de computadores                  ------------  introduccion sistemas                        ------------  introduccion sistemas inteligentes              diferencial
+14_16            algoritmos     lenguajes de programacion  sistemas operativos                      TICS               ------------                  ------------             discretas1                            gerencia               pensamiento sistemico             probabilidad
+16_18  ingenieria economica                  ------------            ingesoft2              ------------               ------------                  ------------             discretas1                        ------------                        ------------             ------------
+18_20  ingenieria economica  informacion y comunicaciones               visual                  paralela               ------------  arquitectura de computadores           ------------  introduccion sistemas inteligentes                    varias variables             Criptografia
+
+FRIDAY
+                             103                    203                    303                        101           102                           104                 105           106                    107                          108
+7_9                 ------------  redes de computadores           ------------               ------------  ------------                  optimizacion        ------------  ------------           ------------  fundamentos de electricidad
+9_11                  simulacion           ------------  redes de computadores  elementos de computadores  ------------                        visual        ------------  Criptografia           ------------                 ------------
+11_13  lenguajes de programacion           ------------           ------------               ------------    algoritmos                  ------------        ------------  ------------           ------------                 ------------
+14_16               ------------             simulacion           ------------               ------------  ------------                  ------------        ------------  ------------  introduccion sistemas                 ------------
+16_18               ------------           ------------           ------------               ------------  ------------                  ------------  interdiciplinarios  ------------           ------------                     integral
+18_20               ------------           ------------           ------------          metodos numericos  ------------  informacion y comunicaciones        ------------  estocasticos           ------------                   discretas1
+
