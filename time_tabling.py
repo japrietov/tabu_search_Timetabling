@@ -4,7 +4,7 @@ import itertools
 
 days = {0:'Monday', 1:'Tuesday', 2:'Wednesday', 3:'Thursday', 4:'Friday'}
 time_slots = {0:'7_9', 1:'9_11', 2:'11_13', 3:'14_16', 4:'16_18', 5:'18_20'}
-type_classrooms = {'C':[0,1,2,3,4,5], 'N':[6,7,8,9]}
+type_classrooms = {'C':[0,1,2,3,4], 'N':[5,6,7,8,9]}
 dict_of_classrooms = {0:('103',60), 1:('203',60), 2:('303',60), 3:('101',45), 4:('102',45), 5:('104',60), 6:('105',45), 7:('106',45), 8:('107',60), 9:('108',45)}
 
 
@@ -114,6 +114,47 @@ def first_configuration(data_complete):
 
     return dict_current_configuration, dict_possible_combinations_copy
 
+# All possible neighbors
+dict_possible_neighbors = {'C':[], 'N':[]}
+def possible_neighbors(possible_combinations):
+
+    # Possible combinations of C classroom
+    c_possible_combinations = possible_combinations['C']
+    copy_c_possible_MJ = c_possible_combinations[:]
+    copy_c_possible_LM = c_possible_combinations[:]
+    copy_c_possible_MV = c_possible_combinations[:]
+    for possible in c_possible_combinations:
+        if possible[0] == 1:
+            day1 = copy_c_possible_MJ.pop(copy_c_possible_MJ.index(possible))
+            day2 = copy_c_possible_MJ.pop(copy_c_possible_MJ.index((3,possible[1], possible[2])))
+            dict_possible_neighbors['C'].append([day1,day2])
+        if possible[0] == 2:
+            day1_LM = copy_c_possible_LM.pop(copy_c_possible_LM.index(possible))
+            day2_LM = copy_c_possible_LM.pop(copy_c_possible_LM.index((0, possible[1], possible[2])))
+            dict_possible_neighbors['C'].append([day1_LM, day2_LM])
+            day1_MV = copy_c_possible_MV.pop(copy_c_possible_MV.index(possible))
+            day2_MV = copy_c_possible_MV.pop(copy_c_possible_MV.index((4, possible[1], possible[2])))
+            dict_possible_neighbors['C'].append([day1_MV, day2_MV])
+
+    # Possible combinations of N classroom
+    n_possible_combinations = possible_combinations['N']
+    copy_n_possible_MJ = n_possible_combinations[:]
+    copy_n_possible_LM = n_possible_combinations[:]
+    copy_n_possible_MV = n_possible_combinations[:]
+    for possible_n in n_possible_combinations:
+        if possible_n[0] == 1:
+            day1_n = copy_n_possible_MJ.pop(copy_n_possible_MJ.index(possible_n))
+            day2_n = copy_n_possible_MJ.pop(copy_n_possible_MJ.index((3,possible_n[1], possible_n[2])))
+            dict_possible_neighbors['N'].append([day1_n,day2_n])
+        if possible_n[0] == 2:
+            day1_LM_n = copy_n_possible_LM.pop(copy_n_possible_LM.index(possible_n))
+            day2_LM_n = copy_n_possible_LM.pop(copy_n_possible_LM.index((0, possible_n[1], possible_n[2])))
+            dict_possible_neighbors['N'].append([day1_LM_n, day2_LM_n])
+            day1_MV_n = copy_n_possible_MV.pop(copy_n_possible_MV.index(possible_n))
+            day2_MV_n = copy_n_possible_MV.pop(copy_n_possible_MV.index((4, possible_n[1], possible_n[2])))
+            dict_possible_neighbors['N'].append([day1_MV_n, day2_MV_n])
+
+
 ############################
 # Initialize the program
 ############################
@@ -130,6 +171,7 @@ for index in range(len(data_with_capability)):
 
 # Initialize all possibilities we have
 possible_combinations()
+possible_neighbors(dict_possible_combinations)
 
 # 3D matrix (x=weekdays, y=slots, z=classrooms)
 matrix_complete = np.zeros((len(days.keys()), len(time_slots.keys()), len(dict_of_classrooms.keys())), dtype='Int32')
@@ -156,7 +198,8 @@ for j in tmp:
 # Save the dictionary of first configuration
 np.save('first_conf_dict.npy', dict_current_configuration)
 np.save('first_conf_matrix.npy', matrix_complete)
-
+np.save('possible_combinations_dict.npy', dict_possible_combinations)
+np.save('possible_neighbors_dict.npy', dict_possible_neighbors)
 
 # TO PRINT A MATRIX
 """
