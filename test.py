@@ -16,6 +16,7 @@ def find_neighbors(current_matrix):
     c_possible_neighbors = dict_possible_neighbors['C']
     n_possible_neighbors = dict_possible_neighbors['N']
 
+
     dat_neighbors_N = [possible_n for possible_n in n_possible_neighbors if current_matrix.item(possible_n[0]) == current_matrix.item(possible_n[1])]
     dat_neighbors_C = [possible_c for possible_c in c_possible_neighbors if current_matrix.item(possible_c[0]) == current_matrix.item(possible_c[1])]
 
